@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block title %}Member numéro {{ member_id }}{% endblock title %}
+
+{% block content %}
+<div class="py-12 px-4 flex flex-wrap">
+    {% for m in mb %}
+    <figure class="md:flex bg-gray-100 rounded-xl p-8 md:p-0">
+        <img class="w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="../../../{{m.picture}}" alt="" width="384" height="512">
+        <div class="pt-6 md:p-8 text-center items-center md:text-left space-y-4">
+          <blockquote>
+            <p class="text-lg font-normal">
+              “I am Khaly DIENG, Student Engineer in Data Transmission and Information Security passionate about Algorithms, Development, cloud and security. I am in search of knowledge, I am a taker of any kind of information, but especially I love to share my knowledge because I know that the shared knowledge is never lost and it grows more, especially when you are a computer scientist, you can contact me on diengkhaly17@gmail.com or become a member on my youtube channel: <a href="http://"></a> https://www.youtube.com/channel/UCKTKV0z6U78Ml3N9puAmGyQ to never miss my tutorials.”
+            </p>
+          </blockquote>
+          <figcaption class="font-medium">
+            <div class="text-cyan-600">
+                {{m.full_name}}
+            </div>
+            <div class="text-gray-500">
+                {{ m.title }}, Algolia
+            </div>
+            <div  class="text-blue-500">
+                <ul class="mt-3 flex">
+                    <li>
+                        <a href="{{m.github}}">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="ml-3">
+                        <a href="{{m.facebook}}">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="ml-3">
+                        <a href="{{m.twitter}}">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="ml-3">
+                        <a href="{{m.linkedin}}">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="ml-3">
+                        <a href="{{m.instagram}}">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="ml-3">
+                        <a href="{{m.website}}">
+                            <i class="fas fa-globe-africa"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+          </figcaption>
+        </div>
+      </figure>
+
+    
+    {% endfor %}
+</div>
+
+
+
+{% endblock content %}
